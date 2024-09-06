@@ -1,0 +1,18 @@
+- Minimum RTO for a single AZ outage
+
+00:00 - Problem happens (0 minutes)
+00:05 - An amount of time passes before an alert triggers (5 minutes)
+00:06 - Automatically switch to second AZ that already configuration (1 mins)
+Total time: 6 minutes
+
+- Minimum RTO for a single region outage
+00:00 - Problem happens (0 minutes)
+00:05 - An amount of time passes before an alert triggers (5 minutes)
+00:06 - Automatically switch to second region that already configuration (1 mins)
+Total time: 6 minutes
+
+- Minimum RPO for a single AZ outage
+Assume this application is not critial and we set backup every 1 hour. In this case, the data that would be lost is 1 hour. So RPO is 1 hour
+
+- Minimum RPO for a single region outage
+Because we have another read replica in another region and it has almost the same data as primary one and it's also has the same backup time is 1 hour So I believe RPO is 1 hour
